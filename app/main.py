@@ -129,7 +129,7 @@ def edit_contact():
         except KeyError:
             print("Contact not found")
 
-    if len(telephone_book[first_char]) == 0:
+    if not len(telephone_book[first_char]):
         del telephone_book[first_char]
     telephone_book = dict(sorted(telephone_book.items()))
 
